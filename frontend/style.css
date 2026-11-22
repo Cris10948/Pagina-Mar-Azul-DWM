@@ -1,0 +1,202 @@
+/*Bloque 1 Variables de color*/
+:root{
+      --color-primario: #2362A1;
+      --color-cuerpo: #121212;
+      --color-texto: #FFFFFF;
+      --color-fondo: #1b1b1b;
+      --color-fondo-secundario: #2c2c2c;
+}
+/*Bloque 2 Estilos generales*/
+.hidden{
+    display: none !important;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+#main-header{
+    background-color: var(--color-primario);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+#main-header h1{
+    margin-bottom: 1rem;
+
+}
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+#navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+#navbar a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+#main-content{
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+section{
+    background-color: var(--color-fondo-secundario);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08)
+}
+section h2 h3{
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+#catalogo-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+#carrusel-platos{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.carusel-item-img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.producto-card{
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fafbfc;
+}
+button{
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+button:hoover{
+    background-color: var(--color-secundario);
+}
+.carousel-control-prev{
+    background-color: var(--color-primario);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.carousel-control-next{
+    background-color: var(--color-primario);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*Bloque 3 formularios*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 500px;
+}
+label{
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+input, select, textarea{
+    padding: 0.6rem;
+    border: 1px solid #e0e6ed;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+#mapa-mesas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
+.mesa-btn{
+    padding: 1rem 0.5rem;
+    border: 1px solid #e0e6ed;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #fafbfc;
+    cursor: pointer;
+    text-align: center;
+}
+.mesa-libre{
+    background-color: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+.mesa-ocupada{
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+/*Bloque 4 Modales*/
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content{
+    background-color: var(--color-fondo-secundario);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+.btn-cerrar-modal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.item-card{
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fafbfc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-footer{
+    background-color: var(--color-primario);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
